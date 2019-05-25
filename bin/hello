@@ -1,0 +1,24 @@
+#! /usr/bin/env node
+const download = require('download-git-repo')
+
+let cmd = process.argv[2]
+let args = process.argv.slice(3)
+
+console.log('Hello!')
+console.log('---')
+console.log(require('../package.json').author)
+console.log('---')
+console.log('Put: > hello download')
+
+if (cmd === 'download') {
+    const bootstrap = 'direct:https://github.com/teedmaker/tmphp-server-info/archive/v1.5.1.zip';
+    const directory = './libs/teedmaker/tmphp-server-info/'
+    download(bootstrap, directory, function (err) {
+        if (err) {
+            console.log('Ops! An error!')
+            return
+        }
+        console.log('Files downloaded!')
+        console.log(`see: ${directory}`)
+    })
+}
