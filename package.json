@@ -1,0 +1,18 @@
+{
+  "name": "@teedmaker/test",
+  "version": "0.1.1",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "./bin/hello"
+  },
+  "bin": {
+    "hello": "./bin/hello"
+  },
+  "author": "Tadeu Barbosa <tadeufbarbosa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "download-git-repo": "^1.1.0"
+  }
+}
